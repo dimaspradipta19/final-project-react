@@ -7,6 +7,7 @@ import { Link } from "@chakra-ui/react";
 
 export default function NavBar() {
   const getSearchKeyword = useSelector((state) => state.pizza.searchKeyword);
+
   const dispatch = useDispatch();
   return (
     <>
@@ -40,7 +41,7 @@ export default function NavBar() {
             height={"40px"}
             marginRight={"10px"}
           />
-          <p>Richie Martin</p>
+          {/* <p>Richie Martin </p> */}
         </HStack>
       </HStack>
     </>
