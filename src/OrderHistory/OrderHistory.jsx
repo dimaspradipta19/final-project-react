@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
-import { Text } from "@chakra-ui/react";
+// import React, { useEffect } from "react";
+// import React, { useEffect } from "react";
+// import { Text } from "@chakra-ui/react";
 import { useSelector } from "react-redux";
 import {
   Accordion,
@@ -10,12 +11,12 @@ import {
   Box,
   TableContainer,
   Table,
-  TableCaption,
+  // TableCaption,
   Thead,
   Tbody,
   Tr,
   Th,
-  Td,
+  // Td,
 } from "@chakra-ui/react";
 
 export default function OrderHistory() {
@@ -29,47 +30,47 @@ export default function OrderHistory() {
   return (
     <>
       <div>
-        {sortedOrderData
-          .map((data) => (
-            // <Text>{data[0].pizzaName}</Text>
-            <Accordion allowToggle>
-              <AccordionItem>
-                <h2>
-                  <AccordionButton>
-                    <Box as="span" flex="1" textAlign="left">
-                      Order Number #ID{data["orderId"]}
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
-                </h2>
-                <AccordionPanel>
-                  <TableContainer>
-                    <Table variant="simple">
-                      <Thead>
-                        <Tr>
-                          <Th>Nama Makanan</Th>
-                          <Th>Jumlah Pesanan</Th>
-                          <Th>Notes</Th>
-                          <Th isNumeric>Price</Th>
-                        </Tr>
-                      </Thead>
-                      <Tbody>
-                        {data.cartData // Create a new array before sorting
-                          .map((item) => (
-                            <Tr key={item.id}>
-                              <Th>{item.pizzaName}</Th>
-                              <Th>{item.quantity}</Th>
-                              <Th>{item.notes}</Th>
-                              <Th isNumeric>{item.price}</Th>
-                            </Tr>
-                          ))}
-                      </Tbody>
-                    </Table>
-                  </TableContainer>
-                </AccordionPanel>
-              </AccordionItem>
-            </Accordion>
-          ))}
+        {sortedOrderData.map((data) => (
+          // <Text>{data[0].pizzaName}</Text>
+          // eslint-disable-next-line react/jsx-key
+          <Accordion allowToggle>
+            <AccordionItem>
+              <h2>
+                <AccordionButton>
+                  <Box as="span" flex="1" textAlign="left">
+                    Order Number #ID{data["orderId"]}
+                  </Box>
+                  <AccordionIcon />
+                </AccordionButton>
+              </h2>
+              <AccordionPanel>
+                <TableContainer>
+                  <Table variant="simple">
+                    <Thead>
+                      <Tr>
+                        <Th>Nama Makanan</Th>
+                        <Th>Jumlah Pesanan</Th>
+                        <Th>Notes</Th>
+                        <Th isNumeric>Price</Th>
+                      </Tr>
+                    </Thead>
+                    <Tbody>
+                      {data.cartData // Create a new array before sorting
+                        .map((item) => (
+                          <Tr key={item.id}>
+                            <Th>{item.pizzaName}</Th>
+                            <Th>{item.quantity}</Th>
+                            <Th>{item.notes}</Th>
+                            <Th isNumeric>{item.price}</Th>
+                          </Tr>
+                        ))}
+                    </Tbody>
+                  </Table>
+                </TableContainer>
+              </AccordionPanel>
+            </AccordionItem>
+          </Accordion>
+        ))}
       </div>
     </>
   );
