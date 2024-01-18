@@ -1,19 +1,13 @@
-import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
   Card,
-  CardHeader,
-  Center,
   CardBody,
   CardFooter,
   Stack,
   Heading,
   Text,
-  Divider,
-  ButtonGroup,
   Button,
   Image,
-  Flex,
   VStack,
 } from "@chakra-ui/react";
 import { storeCartData } from "../Redux/ReduxSlices";
@@ -30,7 +24,6 @@ export default function ProductCard({ cardContent }) {
 
     if (existingItem) {
       // If item already exists, increment its quantity:
-
       return;
     } else {
       // If item doesn't exist, add it to the cart:
@@ -64,7 +57,7 @@ export default function ProductCard({ cardContent }) {
       </CardBody>
       <CardFooter width="100%">
         <VStack width="100%">
-        <Text color="red.600" fontSize="2xl" fontWeight="bold" mb={5}>
+          <Text color="red.600" fontSize="2xl" fontWeight="bold" mb={5}>
             {rupiah(cardContent.pizzaPrice)}
           </Text>
           <Button
