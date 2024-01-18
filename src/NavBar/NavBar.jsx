@@ -1,9 +1,9 @@
-import { Flex, HStack, Image, Input, Button } from "@chakra-ui/react";
+import { HStack, Image, Input, Button } from "@chakra-ui/react";
 import { Link as ReactRouterLink } from "react-router-dom";
-import React from "react";
+// import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { storeSearchKeyword } from "../Redux/ReduxSlices";
-import { Link } from "@chakra-ui/react";
+// import { Link } from "@chakra-ui/react";
 
 export default function NavBar() {
   const getSearchKeyword = useSelector((state) => state.pizza.searchKeyword);

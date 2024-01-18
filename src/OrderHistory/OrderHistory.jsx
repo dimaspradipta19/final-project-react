@@ -1,7 +1,5 @@
-// import React, { useEffect } from "react";
-// import React, { useEffect } from "react";
-// import { Text } from "@chakra-ui/react";
 import { useSelector } from "react-redux";
+import { Link as ReactRouterLink } from "react-router-dom";
 import {
   Accordion,
   AccordionItem,
@@ -12,6 +10,7 @@ import {
   TableContainer,
   Table,
   // TableCaption,
+  Button,
   Thead,
   Tbody,
   Tr,
@@ -29,9 +28,14 @@ export default function OrderHistory() {
 
   return (
     <>
+      <Button colorScheme="orange">
+        <ReactRouterLink style={{ color: "white" }} to="/">
+          Back to menu
+        </ReactRouterLink>
+      </Button>
+      
       <div>
         {sortedOrderData.map((data) => (
-          // <Text>{data[0].pizzaName}</Text>
           // eslint-disable-next-line react/jsx-key
           <Accordion allowToggle>
             <AccordionItem>
