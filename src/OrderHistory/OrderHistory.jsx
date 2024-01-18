@@ -29,7 +29,10 @@ export default function OrderHistory() {
 
   return (
     <>
-      <VStack spacing={4} align="stretch">
+      <VStack
+      spacing={4}
+      align='stretch'
+      >
         <Button colorScheme="orange">
           <ReactRouterLink style={{ color: "white" }} to="/">
             Back to menu
