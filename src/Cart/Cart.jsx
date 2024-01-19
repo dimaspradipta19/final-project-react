@@ -8,7 +8,7 @@ import {
   StackDivider,
 } from "@chakra-ui/react";
 import CartItem from "./CartItem";
-import IMAGE from "../assets/noItemsCart.png";
+import IMAGE from "../assets/NoItemsCart.png";
 
 export default function Cart() {
   const getCartData = useSelector((state) => state.pizza.cartData);
