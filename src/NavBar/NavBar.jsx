@@ -1,22 +1,17 @@
 import { HStack, Image, Input, Button } from "@chakra-ui/react";
 import { Link as ReactRouterLink } from "react-router-dom";
-// import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { storeSearchKeyword } from "../Redux/ReduxSlices";
-// import { Link } from "@chakra-ui/react";
+import IMAGE from "../assets/logo_pizza.png";
 
 export default function NavBar() {
   const getSearchKeyword = useSelector((state) => state.pizza.searchKeyword);
-
+  const imageSource = IMAGE;
   const dispatch = useDispatch();
   return (
     <>
       <HStack px={25} py={25} justifyContent={"space-between"}>
-        <Image
-          src="src/assets/logo_pizza.png"
-          height={"50px"}
-          marginRight={"10px"}
-        />
+        <Image src={imageSource} height={"50px"} marginRight={"10px"} />
         <Input
           placeholder="Search for pizzas!"
           width={"50%"}

@@ -5,6 +5,7 @@ import Menu from "./Menu/Menu";
 import Bill from "./Bill/Bill";
 import NavBar from "./NavBar/NavBar";
 
+
 function App() {
   return (
     <>

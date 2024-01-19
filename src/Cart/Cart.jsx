@@ -1,4 +1,3 @@
-import React from "react";
 import { useSelector } from "react-redux";
 import {
   Card,
@@ -7,9 +6,6 @@ import {
   Stack,
   Heading,
   StackDivider,
-  Text,
-  Center,
-  VStack,
 } from "@chakra-ui/react";
 import CartItem from "./CartItem";
 
@@ -34,16 +30,6 @@ export default function Cart() {
           ) : (
             <div></div>
           )}
-          {/* <div>
-            <img src="src/assets/NoItemsCart.png" style={{ height: 200 }}></img>
-
-            <p>
-              Keranjang kamu masih kosong, yuk pilih pizzamu terlebih dahulu
-            </p>
-          </div> */}
-          {/* <img src="src/assets/NoItemsCart.png" style={{ height: 200 }}></img>
-
-          <p>Keranjang kamu masih kosong, yuk pilih pizzamu terlebih dahulu</p> */}
         </CardHeader>
       </center>
       <CardBody maxWidth="25rem" minWidth="25rem">
@@ -55,28 +41,7 @@ export default function Cart() {
             ))
           ) : (
             <div></div>
-            // If cart is empty, render empty state message and image
-            // <VStack>
-            //   <Center>
-            //     <img src="src/assets/NoItemsCart.png" style={{ height: 200 }} />
-            //     <p>
-            //       Keranjang kamu masih kosong, yuk pilih pizzamu terlebih dahulu
-            //     </p>
-            //   </Center>
-            // </VStack>
           )}
-
-          {/* {getCartData.map((item, index) => (
-            <CartItem
-              key={index}
-              itemIndex={index}
-              item={item}
-              // itemName={item.pizzaName}
-              // itemQty={item.quantity}
-              // itemPrice={item.price}
-              // ItemNotes
-            ></CartItem>
-          ))} */}
         </Stack>
       </CardBody>
     </Card>
